@@ -4,7 +4,7 @@ def sum_of_biggest_squares(a, b, c):
 
     a, b, c = abs(a), abs(b), abs(c)
 
-    if a > b and b > c:
+    if a > b:
         if b > c: return square(a) + square(b)
         else:     return square(a) + square(c)
     else:
