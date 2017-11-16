@@ -1,0 +1,15 @@
+(define (print result) 
+            (display ">>> ") 
+            (display result)
+            (newline)
+)
+
+(define (newline-print result)
+    (newline) (display " ") (display result))
+
+(define (printl list)
+    (display "{")
+        (for-each (lambda (l) (newline-print l)) 
+                  list)
+        (newline)
+    (display "}"))

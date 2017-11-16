@@ -1,0 +1,12 @@
+(load "../library/display.scm")
+(load "../library/signals.scm")
+(load "../library/math.scm")
+(load "../library/main.scm")
+
+(define (permutations s)
+    (if (null? s)
+            (list '())
+            (flatmap (lambda (x)
+                (map (lambda (p) (cons x p))
+                    (permutations (remove x s))))
+                s)))
