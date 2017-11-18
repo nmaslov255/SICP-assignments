@@ -32,6 +32,7 @@
 
 (define (++ num) (+ num 1))
 (define (-- num) (- num 1))
+(define (!= a b) (not (= a b)))
 
 (define (count-even n) ;; from 1 to n
     (if (odd? n) (/ (-- n) 2) (n / 2) ))
