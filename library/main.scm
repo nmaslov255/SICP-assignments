@@ -38,3 +38,8 @@
     (if (odd? n) (/ (-- n) 2) (n / 2) ))
 
 (define (count-odd n) (- n (count-even n)))
+
+(define (exist-in? s list)
+    (cond ((null? list) #f)
+          ((eq? s (car list)) #t)
+           (else (exist-in? s (cdr list)))))

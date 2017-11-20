@@ -13,3 +13,7 @@
                   list)
         (newline)
     (display "}"))
+
+(define (echo list)
+    (display ">>> ")
+    (for-each (lambda (s) (display s)) list) (newline))
